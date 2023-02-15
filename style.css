@@ -74,7 +74,7 @@ header {
 
 .main .card-container .card {
   width: 400px;
-  height: 27.75rem;
+  min-height: 27.75rem;
   background-color: #f5f5f5;
   padding: 2rem;
   display: flex;
@@ -119,6 +119,7 @@ header {
 .footer .container-footer {
   max-width: 1280px;
   height: 100%;
+  padding: 1.125rem;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -140,4 +141,36 @@ header {
 
 .socials {
   text-align: center;
+}
+
+/* Mobile -------------- */
+
+@media only screen and (max-width: 768px) {
+  header {
+    height: fit-content;
+  }
+  .container-elementos-header {
+    flex-direction: column;
+    padding: 1.125rem;
+  }
+  .titulo-principal {
+    margin: 0.625rem 0;
+  }
+
+  .footer {
+    height: fit-content;
+  }
+
+  .regulamento {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .socials {
+    display: none;
+  }
+  .card {
+    height: max-content;
+  }
 }
